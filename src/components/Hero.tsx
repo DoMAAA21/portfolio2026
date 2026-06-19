@@ -50,7 +50,7 @@ export function Hero() {
         </div>
 
         <ul className="mt-14 flex flex-wrap gap-2">
-          {["TypeScript", "React", "Next.js", "Python", "LLMs", "RAG"].map(
+          {["Full-Stack Developer", "AI Engineer", "LLMs", "RAG", "Prompt Engineering"].map(
             (item) => (
               <li
                 key={item}
