@@ -1,6 +1,9 @@
+import { HeroCodeBackground } from "./HeroCodeBackground";
+
 export function Hero() {
   return (
     <section className="relative flex min-h-[calc(100vh-0px)] w-full items-center overflow-hidden bg-background px-6 py-24 sm:px-10 lg:px-4">
+      <HeroCodeBackground />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_55%)]"
@@ -10,7 +13,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]"
       />
 
-      <div className="relative mx-auto w-full max-w-7xl">
+      <div className="relative z-10 mx-auto w-full max-w-7xl">
         <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium text-slate-300">
           <span className="font-mono text-xs uppercase tracking-widest text-slate-400">
             Software Developer
