@@ -1,14 +1,22 @@
 import { projects } from "@/data/projects";
 
+import { AnimatedBlobBackground } from "./AnimatedBlobBackground";
 import { ProjectsCarousel } from "./ProjectsCarousel";
 
 export function Projects() {
   return (
     <section
       id="projects"
-      className="bg-background px-6 py-24 sm:px-10 lg:px-4"
+      className="relative overflow-hidden border-t border-white/10 bg-background px-6 py-24 sm:px-10 lg:px-4"
     >
-      <div className="mx-auto w-full max-w-7xl">
+      <AnimatedBlobBackground variant="projects" />
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-[1] bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]"
+      />
+
+      <div className="relative z-10 mx-auto w-full max-w-7xl">
         <p className="font-mono text-xs uppercase tracking-widest text-slate-400">
           Projects
         </p>

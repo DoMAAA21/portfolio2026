@@ -1,3 +1,5 @@
+import { AboutRibbonBackground } from "./AboutRibbonBackground";
+
 const softwareSkills = [
   "Build full-stack and frontend applications with modern frameworks",
   "Write TypeScript/JavaScript with attention to types, structure, and readability",
@@ -18,9 +20,11 @@ export function About() {
   return (
     <section
       id="about"
-      className="border-t border-white/10 bg-black px-6 py-24 sm:px-10 lg:px-4 rounded-3xl mx-4"
+      className="relative mx-4 overflow-hidden rounded-3xl border border-white/10 bg-black px-6 py-24 sm:px-10 lg:px-4"
     >
-      <div className="mx-auto w-full max-w-7xl">
+      <AboutRibbonBackground />
+
+      <div className="relative z-10 mx-auto w-full max-w-7xl">
         <p className="font-mono text-xs uppercase tracking-widest text-slate-400">
           About
         </p>
@@ -45,7 +49,7 @@ export function About() {
         </p>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          <article className="rounded-2xl border border-white/10 bg-white/5 p-8">
+          <article className="rounded-2xl border border-white/10 bg-black/30 p-8 backdrop-blur-sm">
             <h3 className="text-lg font-semibold text-slate-50">
               Software Development
             </h3>
@@ -68,7 +72,7 @@ export function About() {
             </ul>
           </article>
 
-          <article className="rounded-2xl border border-white/10 bg-white/5 p-8">
+          <article className="rounded-2xl border border-white/10 bg-black/30 p-8 backdrop-blur-sm">
             <h3 className="text-lg font-semibold text-slate-50">
               Growing Into AI Engineering
             </h3>

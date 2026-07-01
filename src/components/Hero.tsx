@@ -1,16 +1,14 @@
+import { HeroBlobBackground } from "./HeroBlobBackground";
 import { HeroCodeBackground } from "./HeroCodeBackground";
 
 export function Hero() {
   return (
     <section className="relative flex min-h-[calc(100vh-0px)] w-full items-center overflow-hidden bg-background px-6 py-24 sm:px-10 lg:px-4">
+      <HeroBlobBackground />
       <HeroCodeBackground />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_55%)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]"
+        className="pointer-events-none absolute inset-0 z-[2] bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]"
       />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl">
@@ -26,7 +24,7 @@ export function Hero() {
           </span>
         </p>
 
-        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl lg:text-6xl lg:leading-[1.08]">
+        <h1 className="max-w-3xl text-3xl font-semibold tracking-tight text-slate-50 sm:text-5xl lg:text-7xl lg:leading-[1.08]">
           I build reliable software—and I&apos;m growing into{" "}
           <span className="text-slate-400">AI engineering</span>.
         </h1>

@@ -220,9 +220,9 @@ export function HeroCodeBackground() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute inset-0 overflow-hidden"
+      className="pointer-events-none absolute inset-0 z-[1] overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-transparent" />
 
       <div className="absolute right-0 top-1/2 hidden w-[min(560px,50vw)] -translate-y-1/2 pr-4 md:block lg:pr-8 xl:pr-12">
         <div className="rounded-xl border border-white/10 bg-black/30 p-5 shadow-2xl backdrop-blur-sm">
@@ -242,7 +242,7 @@ export function HeroCodeBackground() {
 
           <pre
             ref={preRef}
-            className="max-h-[min(420px,55vh)] overflow-y-auto font-mono text-[11px] leading-6 xl:text-xs"
+            className="font-mono text-[11px] leading-6 xl:text-xs"
           >
             <code>
               {completedHighlight}
