@@ -20,7 +20,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative mx-4 overflow-hidden rounded-3xl border border-white/10 bg-black px-6 py-24 sm:px-10 lg:px-4"
+      className="relative overflow-hidden border-t border-white/10 bg-black px-6 py-24 sm:px-10 lg:px-4"
     >
       <AboutRibbonBackground />
 
@@ -49,7 +49,7 @@ export function About() {
         </p>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          <article className="rounded-2xl border border-white/10 bg-black/30 p-8 backdrop-blur-sm">
+          <article className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
             <h3 className="text-lg font-semibold text-slate-50">
               Software Development
             </h3>
@@ -72,7 +72,7 @@ export function About() {
             </ul>
           </article>
 
-          <article className="rounded-2xl border border-white/10 bg-black/30 p-8 backdrop-blur-sm">
+          <article className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
             <h3 className="text-lg font-semibold text-slate-50">
               Growing Into AI Engineering
             </h3>

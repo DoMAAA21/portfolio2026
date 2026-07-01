@@ -5,40 +5,53 @@ import { motion, useReducedMotion } from "motion/react";
 const RIBBONS = [
   {
     wrapper:
-      "top-[18%] left-[-35%] h-[min(140px,18vh)] w-[min(1600px,200%)]",
+      "top-[12%] left-[-30%] h-[min(130px,16vh)] w-[min(1500px,190%)]",
     gradient:
-      "bg-[linear-gradient(90deg,transparent_0%,rgba(56,189,248,0.18)_30%,rgba(129,140,248,0.22)_50%,rgba(56,189,248,0.18)_70%,transparent_100%)]",
+      "bg-[linear-gradient(90deg,transparent_0%,rgba(52,211,153,0.2)_30%,rgba(134,239,172,0.18)_50%,rgba(52,211,153,0.2)_70%,transparent_100%)]",
     animate: {
-      x: [0, 180, -100, 0],
-      y: [0, -40, 30, 0],
-      rotate: [-22, -14, -26, -22],
-      scale: [1, 1.04, 0.98, 1],
+      x: [0, 160, -90, 0],
+      y: [0, -35, 25, 0],
+      rotate: [-20, -12, -24, -20],
+      scale: [1, 1.05, 0.98, 1],
     },
-    duration: 18,
+    duration: 17,
   },
   {
     wrapper:
-      "top-[52%] left-[-25%] h-[min(100px,12vh)] w-[min(1400px,180%)]",
+      "top-[48%] right-[-30%] h-[min(110px,14vh)] w-[min(1300px,170%)]",
     gradient:
-      "bg-[linear-gradient(90deg,transparent_0%,rgba(99,102,241,0.12)_35%,rgba(34,211,238,0.16)_50%,rgba(99,102,241,0.12)_65%,transparent_100%)]",
+      "bg-[linear-gradient(90deg,transparent_0%,rgba(16,185,129,0.15)_35%,rgba(45,212,191,0.18)_50%,rgba(16,185,129,0.15)_65%,transparent_100%)]",
     animate: {
-      x: [0, -120, 90, 0],
-      y: [0, 35, -25, 0],
-      rotate: [16, 24, 10, 16],
+      x: [0, -130, 80, 0],
+      y: [0, 30, -20, 0],
+      rotate: [14, 22, 8, 14],
       scale: [1, 1.03, 0.97, 1],
     },
-    duration: 22,
+    duration: 20,
+  },
+  {
+    wrapper:
+      "bottom-[8%] left-[-15%] h-[min(90px,11vh)] w-[min(1200px,160%)]",
+    gradient:
+      "bg-[linear-gradient(90deg,transparent_0%,rgba(74,222,128,0.12)_40%,rgba(52,211,153,0.14)_55%,transparent_100%)]",
+    animate: {
+      x: [0, 100, -70, 0],
+      y: [0, -20, 15, 0],
+      rotate: [-10, -18, -6, -10],
+      scale: [1, 1.04, 0.96, 1],
+    },
+    duration: 19,
   },
 ];
 
-export function AboutRibbonBackground() {
+export function ContactRibbonBackground() {
   const prefersReducedMotion = useReducedMotion();
   const shouldAnimate = prefersReducedMotion !== true;
 
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-black"
+      className="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-[#00362c]"
     >
       {RIBBONS.map((ribbon, index) => {
         const initial = {
@@ -61,7 +74,7 @@ export function AboutRibbonBackground() {
                       duration: ribbon.duration,
                       repeat: Infinity,
                       ease: "easeInOut",
-                      delay: index * 1.5,
+                      delay: index * 1.2,
                     }
                   : undefined
               }
